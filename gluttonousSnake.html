@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <script src="./js/food.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/snake.js"></script>
+
+    <script>
+        // 初始化地图
+        const game = new Game(500,500)
+        game.init()
+        // 初始化蛇
+        const snake = new Snake()
+        snake.draw()
+        // 舒适化食物
+        const food = new Food(snake.snake)
+        // 蛇吃食物统计分数
+        snake.control(food.food)
+    </script>
+</body>
+</html>
